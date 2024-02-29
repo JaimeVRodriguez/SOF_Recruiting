@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: bridge-starter-app
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5433}/${POSTGRES_DB:bridge_db}
+    username: ${POSTGRES_USERNAME:bridge_dev}
+    password: ${POSTGRES_PASSWORD:bridge_dev}
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    out-of-order: true
