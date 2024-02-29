@@ -4,7 +4,6 @@ import {getAllApplications} from "../../clients/ApplicationRequestClient.ts";
 import {DataGrid, GridColDef, GridRowsProp} from "@mui/x-data-grid";
 import {ApplicationType} from "../../types/ApplicationType.ts";
 
-
 export default function Recruiter() {
     const [applications, setApplications] = useState<ApplicationType[]>([])
 

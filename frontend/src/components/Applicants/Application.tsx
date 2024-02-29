@@ -21,7 +21,6 @@ import {ApplicationYupSchema} from "../../helpers/ApplicationYupSchema.ts";
 import ConfirmationSnackbar from "../ConfirmationSnackbar/ConfirmationSnackbar.tsx";
 import {useState} from "react";
 
-
 export default function Application() {
     const [showAlert, setShowAlert] = useState(false)
 
@@ -32,8 +31,6 @@ export default function Application() {
     } = useForm<ApplicationType>({
         resolver: yupResolver(ApplicationYupSchema)
     });
-
-
 
     const closeClick = () => {
         setShowAlert(false)
@@ -148,20 +145,16 @@ export default function Application() {
                                 </Select>
                             </FormControl>
                         )}
-
                     />
                     
                     <Controller
                         name={"uploadedFile"}
                         control={control}
-                        render={({ field: {onChange, value}, fieldState: {error}}) => (
+                        render={({ field: {onChange}}) => (
                             <TextField
                                 type={"file"}
-                                // error={{!!error}}
-                                // helperText={error ? error.message : null}
                                 onChange={(e) => onChange(e.target.files[0])}
                                 sx={{width: 450}}
-
                             />
                         )}
                     />
