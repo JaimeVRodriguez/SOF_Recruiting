@@ -37,22 +37,7 @@ export default function Application() {
     }
 
     const onSubmit = (data: ApplicationType) => {
-        const formData = new FormData();
-        formData.append('application', new Blob([JSON.stringify({
-            selection: data.selection,
-            dodid: data.dodid,
-            firstName: data.firstName,
-            lastName: data.lastName,
-            rank: data.rank
-        })], {
-            type: 'application/json'
-        }))
-
-        if (data.uploadedFile) {
-            formData.append('uploadedFile', data.uploadedFile);
-        }
-
-        createApplication(formData)
+        createApplication(data)
             .then(() => {
                 console.log(data)
                 setShowAlert(true)
@@ -144,18 +129,6 @@ export default function Application() {
                                     ))}
                                 </Select>
                             </FormControl>
-                        )}
-                    />
-                    
-                    <Controller
-                        name={"uploadedFile"}
-                        control={control}
-                        render={({ field: {onChange}}) => (
-                            <TextField
-                                type={"file"}
-                                onChange={(e) => onChange(e.target.files[0])}
-                                sx={{width: 450}}
-                            />
                         )}
                     />
                 </Stack>

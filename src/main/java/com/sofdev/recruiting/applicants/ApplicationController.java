@@ -16,35 +16,14 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/applications")
 public class ApplicationController {
-    private String saveFile(MultipartFile file) throws IOException {
-        String uploadDir = "uploads/";
-
-        Path uploadPath = Paths.get(uploadDir);
-        if (!Files.exists(uploadPath)) {
-            Files.createDirectories(uploadPath);
-        }
-
-        String extension = FilenameUtils.getExtension(file.getOriginalFilename());
-        String fileName = UUID.randomUUID().toString() + "." + extension;
-
-        Path filePath = uploadPath.resolve(fileName);
-        Files.copy(file.getInputStream(), filePath);
-
-        return fileName;
-    }
-
     private final ApplicationService applicationService;
 
     public ApplicationController(ApplicationService applicationService) {
         this.applicationService = applicationService;
     }
 
-    @PostMapping(consumes = {"multipart/form-data"})
-    public ResponseEntity<Application> createApplication(
-            @RequestPart("application") Application application,
-            @RequestParam("uploadedFile") MultipartFile uploadedFile) throws IOException {
-        String fileName = saveFile(uploadedFile);
-        application.setUploadedFile(fileName);
+    @PostMapping
+    public ResponseEntity<Application> createApplication(@RequestBody Application application) throws IOException {
         Application response = applicationService.createApplication(application);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }

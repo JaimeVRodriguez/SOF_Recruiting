@@ -5,5 +5,4 @@ export interface ApplicationType {
     firstName: string;
     lastName: string;
     rank: string;
-    uploadedFile?: File
 }

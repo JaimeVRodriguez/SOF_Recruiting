@@ -3,10 +3,8 @@ import axios from "axios";
 import {EventType} from "../types/EventType.ts";
 import {BranchType} from "../types/BranchType.ts";
 
-export const createApplication = async (formData: FormData): Promise<ApplicationType> => {
-    const response = await axios.post<ApplicationType>("/api/applications", formData, {
-        headers: {}
-    });
+export const createApplication = async (data: ApplicationType): Promise<ApplicationType> => {
+    const response = await axios.post<ApplicationType>("/api/applications", data);
     return response.data;
 }
 
