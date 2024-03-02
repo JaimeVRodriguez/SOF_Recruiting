@@ -2,7 +2,7 @@ import * as yup from "yup";
 
 //TODO: Required Field Messages
 export const ApplicationYupSchema = yup.object({
-    selection: yup
+    branch: yup
         .string()
         .required(),
     dodid: yup

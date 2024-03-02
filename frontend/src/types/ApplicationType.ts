@@ -1,6 +1,6 @@
 export interface ApplicationType {
     id?: number;
-    selection: string;
+    branch: string;
     dodid: string;
     firstName: string;
     lastName: string;

@@ -57,7 +57,7 @@ export default function Application() {
                 <Typography variant={"h3"}>SORB Application</Typography>
                 <Stack spacing={{xs: 2, sm: 1.07}} direction={"row"} useFlexGap flexWrap={"wrap"}>
                     <Controller
-                        name={"selection"}
+                        name={"branch"}
                         control={control}
                         render={({field}) => (
                             <RadioGroup  {...field} row>
