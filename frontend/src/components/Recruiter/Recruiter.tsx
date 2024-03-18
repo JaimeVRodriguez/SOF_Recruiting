@@ -18,16 +18,10 @@ export default function Recruiter() {
             })
     }, [])
 
-
-
-
-
-
-
     const rows: GridRowsProp = applications;
 
     const columns: GridColDef[] = [
-        {field: "selection", headerName: "Selection Group", width: 125},
+        {field: "branch", headerName: "Selection Group", width: 125},
         {field: "dodid", headerName: "DODID", width: 125},
         {field: "rank", headerName: "Rank", width: 125},
         {field: "firstName", headerName: "First Name", width: 125},
@@ -37,7 +31,6 @@ export default function Recruiter() {
     return (
         <>
             <Typography>Recruiter</Typography>
-
             <DataGrid
                 columns={columns}
                 rows={rows}

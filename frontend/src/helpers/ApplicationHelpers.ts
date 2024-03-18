@@ -23,7 +23,6 @@ export const applicationList: ApplicationType[] = [
     applicationTwo
 ]
 
-
-export const selections = ["SFAS", "POAS", "CAAS"]
+export const branches = ["SFAS", "POAS", "CAAS"]
 
 export const ranks = ["PVT", "PFC", "SPC", "CPL", "SGT", "SSG"]

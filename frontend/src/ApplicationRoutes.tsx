@@ -9,6 +9,7 @@ export default function ApplicationRoutes() {
         <Routes>
             <Route path="" element={<NavBar/>}>
                 <Route path="/" element={<MainPage/>}/>
+                <Route path='/home' element={<MainPage/>}/>
                 <Route path="/application" element={<Application/>}/>
                 <Route path="/recruiter" element={<Recruiter/>}/>
                 <Route path="/branches" element={<Branches/>}/>

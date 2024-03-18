@@ -19,7 +19,7 @@ public class Application {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String selection;
+    private String branch;
     private String dodid;
     private String firstName;
     private String lastName;

@@ -9,21 +9,20 @@ import {
     RadioGroup,
     Select,
     Stack,
-    TextField,
     Typography
 } from "@mui/material";
 import {Controller, useForm} from "react-hook-form";
 import {createApplication} from "../../clients/ApplicationRequestClient.ts";
 import {ApplicationType} from "../../types/ApplicationType.ts";
-import {ranks, selections} from "../../helpers/ApplicationHelpers.ts";
+import {branches, ranks} from "../../helpers/ApplicationHelpers.ts";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {ApplicationYupSchema} from "../../helpers/ApplicationYupSchema.ts";
-import ConfirmationSnackbar from "../ConfirmationSnackbar/ConfirmationSnackbar.tsx";
-import {useState} from "react";
+import {useSnackbar} from "../SnackbarProvider/provider/SnackbarProvider.tsx";
+import {SnackbarContext} from "../SnackbarProvider/type/SnackbarContext.tsx";
+import Textfield from "../Textfield/Textfield.tsx";
 
 export default function Application() {
-    const [showAlert, setShowAlert] = useState(false)
-
+    const {openSnackbar} = useSnackbar() as SnackbarContext;
     const {
         control,
         formState: {errors},
@@ -32,22 +31,17 @@ export default function Application() {
         resolver: yupResolver(ApplicationYupSchema)
     });
 
-    const closeClick = () => {
-        setShowAlert(false)
-    }
-
-    const onSubmit = (data: ApplicationType) => {
-        createApplication(data)
+    const onSubmit = (formData: ApplicationType) => {
+        createApplication(formData)
             .then(() => {
-                console.log(data)
-                setShowAlert(true)
+                console.log(formData)
+                openSnackbar('Success')
             })
             .catch((e) => console.log(e))
     }
 
     return (
         <>
-            <ConfirmationSnackbar open={showAlert} closeClick={closeClick}/>
             <Box
                 textAlign={"center"}
                 component={"form"}
@@ -61,7 +55,7 @@ export default function Application() {
                         control={control}
                         render={({field}) => (
                             <RadioGroup  {...field} row>
-                                {selections.map((selection) => (
+                                {branches.map((selection) => (
                                     <FormControlLabel
                                         control={<Radio value={selection}/>}
                                         label={selection}
@@ -71,45 +65,28 @@ export default function Application() {
                         )}
                     />
 
-                    <Controller
-                        name={"dodid"}
+                    <Textfield
+                        name={'dodid'}
+                        label={"DODID"}
+                        width={450}
                         control={control}
-                        render={({field}) => (
-                            <TextField
-                                sx={{width: 450}}
-                                {...field}
-                                label={"DODID"}
-                                variant={"outlined"}
-                                error={!!errors.dodid}
-                                helperText={errors.dodid?.message}
-                            />
-                        )}
+                        errors={errors}
                     />
 
-                    <Controller
-                        name={"firstName"}
+                    <Textfield
+                        name={'firstName'}
+                        label={'First Name'}
+                        width={225}
                         control={control}
-                        render={({field}) => (
-                            <TextField
-                                sx={{width: 225}}
-                                {...field}
-                                label={"First Name"}
-                                variant={"outlined"}
-                            />
-                        )}
+                        errors={errors}
                     />
 
-                    <Controller
-                        name={"lastName"}
+                    <Textfield
+                        name={'lastName'}
+                        width={225}
+                        label={'Last Name'}
                         control={control}
-                        render={({field}) => (
-                            <TextField
-                                sx={{width: 225}}
-                                {...field}
-                                label={"Last Name"}
-                                variant={"outlined"}
-                            />
-                        )}
+                        errors={errors}
                     />
 
                     <Controller
@@ -131,6 +108,8 @@ export default function Application() {
                             </FormControl>
                         )}
                     />
+
+                    <Textfield name={'mos'} width={120} label={'MOS'} control={control} errors={errors}/>
                 </Stack>
                 <Button variant={"outlined"} type={"submit"}>Submit</Button>
             </Box>

@@ -7,7 +7,7 @@ export const ApplicationYupSchema = yup.object({
         .required(),
     dodid: yup
         .string()
-        .required("Required Field"),
+        .required("DODID IS REQUIRED"),
     firstName: yup
         .string()
         .required(),

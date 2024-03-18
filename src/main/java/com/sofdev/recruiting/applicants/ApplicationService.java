@@ -17,7 +17,6 @@ public class ApplicationService {
         return applicationRepository.save(application);
     }
 
-
     public List<Application> getAllApplications() {
         return applicationRepository.findAll();
     }
