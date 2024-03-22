@@ -9,22 +9,24 @@ public class ApplicationHelper {
     public static Application applicationOne() {
         return Application.builder()
                 .id(1L)
-                .selection("POAS")
+                .branch("POAS")
                 .dodid("1386584431")
                 .firstName("Jaime")
                 .lastName("Rodriguez")
                 .rank("SFC")
+                .mos("37F")
                 .build();
     }
 
     public static Application applicationTwo() {
         return Application.builder()
                 .id(2L)
-                .selection("SFAS")
+                .branch("SFAS")
                 .dodid("1484283319")
                 .firstName("Gunner")
                 .lastName("Rodriguez")
                 .rank("PFC")
+                .mos("11B")
                 .build();
     }
 

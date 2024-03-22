@@ -1,4 +1,4 @@
-import * as yup from "yup";
+import * as yup from 'yup';
 
 //TODO: Required Field Messages
 export const ApplicationYupSchema = yup.object({
@@ -17,4 +17,7 @@ export const ApplicationYupSchema = yup.object({
     rank: yup
         .string()
         .required(),
+    mos: yup
+        .string()
+        .required()
 })

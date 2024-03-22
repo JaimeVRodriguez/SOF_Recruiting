@@ -24,4 +24,5 @@ public class Application {
     private String firstName;
     private String lastName;
     private String rank;
+    private String mos;
 }
