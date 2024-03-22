@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router-dom"
-import NavBar from "./components/NavBar/NavBar.tsx";
-import Application from "./components/Applicants/Application.tsx";
-import Recruiter from "./components/Recruiter/Recruiter.tsx";
-import MainPage from "./components/MainPage/MainPage.tsx";
-import Branches from "./components/Branches/Branches.tsx";
+import AppNavbar from "./app-navbar/view/AppNavbar.tsx";
+import CreateApplication from "./application/view/CreateApplication.tsx";
+import Recruiter from "./recruiter/view/Recruiter.tsx";
+import HomePage from "./home/view/HomePage.tsx";
+import Branches from "./branches/view/Branches.tsx";
 export default function ApplicationRoutes() {
     return (
         <Routes>
-            <Route path="" element={<NavBar/>}>
-                <Route path="/" element={<MainPage/>}/>
-                <Route path='/home' element={<MainPage/>}/>
-                <Route path="/application" element={<Application/>}/>
+            <Route path="" element={<AppNavbar/>}>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path='/home' element={<HomePage/>}/>
+                <Route path="/application" element={<CreateApplication/>}/>
                 <Route path="/recruiter" element={<Recruiter/>}/>
                 <Route path="/branches" element={<Branches/>}/>
             </Route>

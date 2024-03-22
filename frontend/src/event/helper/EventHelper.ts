@@ -1,4 +1,4 @@
-import {EventType} from "../types/EventType.ts"
+import {EventType} from "../type/EventType.ts"
 
 export const eventOne: EventType = {
     id: 1,

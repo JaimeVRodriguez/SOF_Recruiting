@@ -1,4 +1,4 @@
-import {BranchType} from "../types/BranchType.ts";
+import {BranchType} from "../type/BranchType.ts";
 
 export const branchOne: BranchType = {
     id: 1,

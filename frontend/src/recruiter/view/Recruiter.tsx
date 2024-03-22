@@ -2,7 +2,9 @@ import {Typography} from "@mui/material";
 import {useEffect, useState} from "react";
 import {getAllApplications} from "../../clients/ApplicationRequestClient.ts";
 import {DataGrid, GridColDef, GridRowsProp} from "@mui/x-data-grid";
-import {ApplicationType} from "../../types/ApplicationType.ts";
+import {ApplicationType} from "../../application/type/ApplicationType.ts";
+
+//TODO: Need a test for this page
 
 export default function Recruiter() {
     const [applications, setApplications] = useState<ApplicationType[]>([])

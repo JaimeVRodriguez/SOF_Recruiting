@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/Applicants/Application.tsx</title>
+    <title>Code coverage report for src/components/Applicants/CreateApplication.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/Applicants</a> Application.tsx</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/Applicants</a> CreateApplication.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -316,7 +316,7 @@ import {Controller, useForm} from "react-hook-form";
 import {createApplication} from "../../clients/ApplicationRequestClient.ts";
 import {ApplicationType} from "../../types/ApplicationType.ts";
 &nbsp;
-export default function Application() {
+export default function CreateApplication() {
 &nbsp;
     const {
         control,
@@ -339,7 +339,7 @@ export default function Application() {
                 onSubmit={handleSubmit(onSubmit)}
                 sx={{ width: 500, margin: "auto" }}
             &gt;
-                &lt;Typography&gt;Application&lt;/Typography&gt;
+                &lt;Typography&gt;CreateApplication&lt;/Typography&gt;
                 &lt;Stack spacing={{ xs: 2, sm: 1.07 }} direction="row" useFlexGap flexWrap="wrap"&gt;
                     &lt;Controller
                         name="selection"

@@ -86,13 +86,13 @@
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span></td><td class="text"><pre class="prettyprint lang-js">import { Route, Routes } from "react-router-dom"
-import NavBar from "./components/NavBar/NavBar.tsx";
-import Application from "./components/Applicants/Application.tsx";
+import AppNavbar from "./components/AppNavbar/AppNavbar.tsx";
+import CreateApplication from "./components/Applicants/CreateApplication.tsx";
 export default function ApplicationRoutes() {
     return (
         &lt;Routes&gt;
-            &lt;Route path="" element={&lt;NavBar/&gt;}&gt;
-                &lt;Route path="/application" element={&lt;Application/&gt;}/&gt;
+            &lt;Route path="" element={&lt;AppNavbar/&gt;}&gt;
+                &lt;Route path="/application" element={&lt;CreateApplication/&gt;}/&gt;
             &lt;/Route&gt;
         &lt;/Routes&gt;
     )

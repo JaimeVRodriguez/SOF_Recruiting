@@ -1,9 +1,9 @@
 import nock from "nock";
 import {describe, expect, it} from "vitest";
 import {createApplication, getAllApplications, getAllBranches, getAllEvents} from "../ApplicationRequestClient.ts";
-import {applicationList, applicationOne} from "../../helpers/ApplicationHelpers.ts";
-import {eventList} from "../../helpers/EventHelper.ts";
-import {branchList} from "../../helpers/BranchHelper.ts";
+import {applicationList, applicationOne} from "../../application/helper/ApplicationHelpers.ts";
+import {eventList} from "../../event/helper/EventHelper.ts";
+import {branchList} from "../../branches/helper/BranchHelper.ts";
 
 
 describe("ApplicationRequestClient", () => {

@@ -66,8 +66,8 @@ BRF:1
 BRH:1
 end_of_record
 TN:
-SF:src/components/Applicants/Application.tsx
-FN:18,Application
+SF:src/components/Applicants/CreateApplication.tsx
+FN:18,CreateApplication
 FN:25,onSubmit
 FN:46,render
 FN:69,render
@@ -75,7 +75,7 @@ FN:83,render
 FN:96,render
 FNF:6
 FNH:5
-FNDA:4,Application
+FNDA:4,CreateApplication
 FNDA:0,onSubmit
 FNDA:4,render
 FNDA:4,render
@@ -211,13 +211,13 @@ BRF:6
 BRH:6
 end_of_record
 TN:
-SF:src/components/NavBar/NavBar.tsx
-FN:4,NavBar
+SF:src/components/AppNavbar/AppNavbar.tsx
+FN:4,AppNavbar
 FN:14,onClick
 FN:21,onClick
 FNF:3
 FNH:2
-FNDA:9,NavBar
+FNDA:9,AppNavbar
 FNDA:4,onClick
 FNDA:0,onClick
 DA:1,1

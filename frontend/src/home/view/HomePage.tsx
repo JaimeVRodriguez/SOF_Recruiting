@@ -1,7 +1,7 @@
 import {Divider, Link, Stack, Typography} from "@mui/material";
-import EventCard from "../EventCard/EventCard.tsx";
+import EventCard from "../../event/view/EventCard.tsx";
 
-export default function MainPage() {
+export default function HomePage() {
     return(
         <>
             <Stack textAlign={"center"}>

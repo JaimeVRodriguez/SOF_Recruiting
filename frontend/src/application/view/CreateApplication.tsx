@@ -13,15 +13,15 @@ import {
 } from "@mui/material";
 import {Controller, useForm} from "react-hook-form";
 import {createApplication} from "../../clients/ApplicationRequestClient.ts";
-import {ApplicationType} from "../../types/ApplicationType.ts";
-import {branches, ranks} from "../../helpers/ApplicationHelpers.ts";
-import {yupResolver} from "@hookform/resolvers/yup";
-import {ApplicationYupSchema} from "../../helpers/ApplicationYupSchema.ts";
-import {useSnackbar} from "../SnackbarProvider/provider/SnackbarProvider.tsx";
-import {SnackbarContext} from "../SnackbarProvider/type/SnackbarContext.tsx";
-import Textfield from "../Textfield/Textfield.tsx";
+import {ApplicationType} from "../type/ApplicationType.ts";
+import {branches, ranks} from "../helper/ApplicationHelpers.ts";
+import {yupResolver} from '@hookform/resolvers/yup';
+import {ApplicationYupSchema} from "../helper/ApplicationYupSchema.ts";
+import {useSnackbar} from "../../snackbar/provider/SnackbarProvider.tsx";
+import {SnackbarContext} from "../../snackbar/type/SnackbarContext.tsx";
+import Textfield from "./Textfield.tsx";
 
-export default function Application() {
+export default function CreateApplication() {
     const {openSnackbar} = useSnackbar() as SnackbarContext;
     const {
         control,

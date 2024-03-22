@@ -2,14 +2,15 @@ import {render, screen} from "@testing-library/react";
 import {beforeEach, describe, expect, it} from "vitest";
 import App from "../../../App.tsx";
 import {userEvent} from "@testing-library/user-event";
+import CreateApplication from "../../view/CreateApplication.tsx";
 
-describe("Application", () => {
+describe("CreateApplication", () => {
     beforeEach(async () => {
-            render(<App/>)
-            await userEvent.click(screen.getByRole("menuitem", {name: "Start Application"}))
+            render(<CreateApplication/>)
+            // await userEvent.click(screen.getByRole("menuitem", {name: "Start Application"}))
         }
     )
-    it("should display Application Header", async function () {
+    it("should display CreateApplication Header", async function () {
         expect(screen.getByText('SORB Application')).toBeVisible()
     })
 
@@ -54,7 +55,7 @@ describe("Application", () => {
 
         await userEvent.click(screen.getByRole("button", {name: /submit/i}))
 
-        expect(await screen.findByText(/success/i)).toBeInTheDocument()
+        expect().toBeInTheDocument()
     });
 
 

@@ -1,15 +1,15 @@
 import {describe, expect, it} from "vitest";
 import {render, screen} from "@testing-library/react";
-import MainPage from "../MainPage.tsx";
+import HomePage from "../../view/HomePage.tsx";
 
-describe('MainPage', () => {
+describe('HomePage', () => {
     it('should display main page header', () => {
-        render(<MainPage/>)
+        render(<HomePage/>)
         expect(screen.getByText("Special Operations Recruiting Battalion")).toBeVisible()
     });
 
     it('should display events header', () => {
-        render(<MainPage/>)
+        render(<HomePage/>)
         expect(screen.getByText("Events")).toBeVisible()
     });
 });

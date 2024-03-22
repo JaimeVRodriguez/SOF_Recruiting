@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import ApplicationRoutes from "./ApplicationRoutes";
-import {SnackbarProvider} from "./components/SnackbarProvider/provider/SnackbarProvider.tsx";
+import {SnackbarProvider} from "./snackbar/provider/SnackbarProvider.tsx";
 
 export default function App() {
     return (

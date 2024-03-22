@@ -1,7 +1,7 @@
 import {Box, Button, Card, CardActions, CardContent, CardMedia, Stack, Typography} from "@mui/material";
 import {useEffect, useState} from "react";
 import {getAllBranches} from "../../clients/ApplicationRequestClient.ts";
-import {BranchType} from "../../types/BranchType.ts";
+import {BranchType} from "../type/BranchType.ts";
 
 export default function Branches() {
     const [branches, setBranches] = useState<BranchType[]>([])

@@ -1,7 +1,7 @@
 import {AppBar, Box, MenuItem, Stack} from "@mui/material";
 import {Outlet, useNavigate} from "react-router-dom";
 
-export default function NavBar() {
+export default function AppNavbar() {
     const navigate = useNavigate();
     return (
         <>

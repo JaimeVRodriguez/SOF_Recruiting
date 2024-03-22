@@ -1,4 +1,4 @@
-import {ApplicationType} from '../types/ApplicationType.ts';
+import {ApplicationType} from '../type/ApplicationType.ts';
 
 export const applicationOne: ApplicationType = {
     id: 1,

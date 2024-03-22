@@ -1,7 +1,7 @@
-import {ApplicationType} from "../types/ApplicationType.ts";
+import {ApplicationType} from "../application/type/ApplicationType.ts";
 import axios from "axios";
-import {EventType} from "../types/EventType.ts";
-import {BranchType} from "../types/BranchType.ts";
+import {EventType} from "../event/type/EventType.ts";
+import {BranchType} from "../branches/type/BranchType.ts";
 
 export const createApplication = async (data: ApplicationType): Promise<ApplicationType> => {
     const response = await axios.post<ApplicationType>("/api/applications", data);
