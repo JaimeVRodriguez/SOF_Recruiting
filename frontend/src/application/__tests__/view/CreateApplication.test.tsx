@@ -1,6 +1,5 @@
 import {render, screen} from "@testing-library/react";
 import {beforeEach, describe, expect, it} from "vitest";
-import App from "../../../App.tsx";
 import {userEvent} from "@testing-library/user-event";
 import CreateApplication from "../../view/CreateApplication.tsx";
 

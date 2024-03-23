@@ -28,6 +28,7 @@ export default function Recruiter() {
         {field: "rank", headerName: "Rank", width: 125},
         {field: "firstName", headerName: "First Name", width: 125},
         {field: "lastName", headerName: "Last Name", width: 125},
+        {field: 'mos', headerName: 'MOS', width: 125}
     ]
 
     return (
@@ -36,6 +37,7 @@ export default function Recruiter() {
             <DataGrid
                 columns={columns}
                 rows={rows}
+                disableVirtualization
             />
         </>
     )
