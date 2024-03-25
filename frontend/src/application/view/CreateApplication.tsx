@@ -12,7 +12,7 @@ import {
     Typography
 } from "@mui/material";
 import {Controller, useForm} from "react-hook-form";
-import {createApplication} from "../../clients/ApplicationRequestClient.ts";
+import {createApplication} from "../client/ApplicationClient.ts";
 import {ApplicationType} from "../type/ApplicationType.ts";
 import {branches, ranks} from "../helper/ApplicationHelpers.ts";
 import {yupResolver} from '@hookform/resolvers/yup';
@@ -34,8 +34,8 @@ export default function CreateApplication() {
     const onSubmit = (formData: ApplicationType) => {
         createApplication(formData)
             .then(() => {
-                console.log(formData)
                 openSnackbar('Success')
+                console.log(formData)
             })
             .catch((e) => console.log(e))
     }

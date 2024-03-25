@@ -1,11 +1,13 @@
 import {useEffect, useState} from "react";
 import {EventType} from "../type/EventType.ts";
-import {getAllEvents} from "../../clients/ApplicationRequestClient.ts";
 import {Avatar, Card, CardContent, CardHeader, CardMedia, Typography} from "@mui/material";
 import liberty from "../../assets/liberty.png";
+import {getAllEvents} from "../client/EventClient.ts";
 
 
 //TODO: Need to create test
+//TODO: Move card to it's own component
+
 export default function EventCard() {
     const [events, setEvents] = useState<EventType[]>([])
 

@@ -1,6 +1,6 @@
 import {Typography} from "@mui/material";
 import {useEffect, useState} from "react";
-import {getAllApplications} from "../../clients/ApplicationRequestClient.ts";
+import {getAllApplications} from "../../application/client/ApplicationClient.ts";
 import {DataGrid, GridColDef, GridRowsProp} from "@mui/x-data-grid";
 import {ApplicationType} from "../../application/type/ApplicationType.ts";
 
